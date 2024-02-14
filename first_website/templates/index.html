@@ -1,0 +1,36 @@
+<html>
+    <head>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    </head>
+<body style= "background-color: brown">
+   
+    <button> <a href="/">Home </a> </button> <br>
+   <div style="background-color: blue; width: 330px;height: auto;"> <h1 style="text-align:center;color:white"> To do List</h1> 
+   <form method="get">  
+       <input type="text" style="width:300px;" placeholder="Add new text ..." name="task">
+       <button type="submit" style="background-color: aquamarine;">+</button><br>
+       <!-- https://fontawesome.com/icons  icons  for adding  delete button-->
+       {% for item in data %}
+       
+       <div
+       style="background-color: rgb(235, 235, 242); width: 329px; height: 20px; color: rgb(86, 8, 8); margin-top: 2px; padding: 0px 0px;" >
+
+       <small style='font-size: 10px; float: right;margin-right:10px'> {{item.task_date_time}} 
+    
+    </small><input type="radio">
+        <label for="html">{{item.id}}. {{item.task_name}}  </label> 
+        <a href = /delete/{{item.id}} >   <i style ="float: right;padding:2px" class="fa-solid fa-trash-can"></i>  </a>
+        
+        <br>
+       
+        {% endfor %}
+    </div>
+  
+</form>
+   
+</div>
+
+</body>
+
+
+</html>

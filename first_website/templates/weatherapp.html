@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f2f2f2;
+            margin: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+        }
+
+        .weather-container {
+            text-align: center;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .weather-info img {
+            width: 50px;
+            height: 50px;
+        }
+
+        .weather-info p {
+            margin: 10px 0;
+        }
+
+        #temperature {
+            font-weight: bold;
+            color: #007BFF;
+        }
+
+        #condition {
+            font-weight: bold;
+        }
+    </style>
+    <title>Weather App</title>
+</head>
+<body>
+    <div class="weather-container">
+        <h1>Weather App</h1>
+        <div class="weather-info">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/08/Weather_icon_-_sunny.svg/512px-Weather_icon_-_sunny.svg.png" alt="Weather Icon">
+            <p>Temperature: <span id="temperature">{{data.temp}}°F</span></p>
+            <p>City: <span id="condition">{{data.name}}</span></p>
+            <p>Country: <span id="condition">{{data.country}}</span></p>
+        </div>
+    </div>
+</body>
+</html>
